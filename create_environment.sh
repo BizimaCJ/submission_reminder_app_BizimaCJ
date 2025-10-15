@@ -1,7 +1,12 @@
 #!/bin/bash
 
+echo "----------------------------------------"
+echo "Starting the Submission Reminder App..."
+echo "----------------------------------------"
+
 #code for asking the name to use on the directory
-read -p "What's your name? " yourName
+read -p "What's your name?
+--> " yourName
 
 #code to create the main directory
 parent_dir="submission_reminder_$yourName"
@@ -14,14 +19,10 @@ fi
 
 #Now, to create all the needed directories
 mkdir -p "$parent_dir"
-printf "The parent directory with your name has been created.\n"
-echo "Creation of sub-directories..."
 mkdir -p "$parent_dir/app"
 mkdir -p "$parent_dir/modules"
 mkdir -p "$parent_dir/assets"
 mkdir -p "$parent_dir/config"
-
-printf "\nThe sub-directories have been created."
 
 #creation of the files in the sub-directories and startup.sh
 touch $parent_dir/app/reminder.sh
@@ -29,8 +30,6 @@ touch $parent_dir/assets/submissions.txt
 touch $parent_dir/modules/functions.sh
 touch $parent_dir/config/config.env
 touch $parent_dir/startup.sh
-
-printf "\nThe files in the sub-directories have been created and are empty.\nWriting to the files...\n"
 
 #writing to the reminder.sh
 cat << 'EOF' > $parent_dir/app/reminder.sh
@@ -93,6 +92,7 @@ Oluebubechi, Git, submitted
 EOF
 
 #writing to the config.env file
+#cat writes better than echo for text with "" that's why I used it.
 cat << 'EOF' > $parent_dir/config/config.env
 # This is the config file
 ASSIGNMENT="Shell Navigation"
@@ -112,12 +112,9 @@ cd "$(dirname "$0")" || { echo "Failed to change directory"; exit 1; }
 ./app/reminder.sh
 EOF
 
-echo "All the files have their respective contents right now."
+printf "\nThe director and its contents have been created.\n----------------------------------------\n"
 
 #Now, to make all these files executable
 find "$parent_dir" -type f -name "*.sh" -exec chmod +x {} \;
 
-printf "All is good for $yourName's environment!!! (^o^)/\n\nTo start the app, run:\ncd $parent_dir && ./startup.sh\n\n"
-
-#I had written this in my UBuntu, so to make sure that all lines have the linux endings,
-#find "$parent_dir" -type f -exec dos2unix {} \; 2>/dev/null
+printf "All is good for $yourName's environment!!! (^o^)/\n\nTo start the app, run:\ncd $parent_dir && ./startup.sh\n----------------------------------------\n"
