@@ -1,6 +1,5 @@
 #!/bin/bash
 
-echo "----------------------------------------"
 echo "Starting the Submission Reminder App..."
 echo "----------------------------------------"
 
@@ -8,7 +7,7 @@ echo "----------------------------------------"
 read -p "What's your name?
 --> " yourName
 
-#code to create the main directory
+#variable to hold the parent directory's name
 parent_dir="submission_reminder_$yourName"
 
 #code for error handling if the parent_dir already exists
@@ -17,12 +16,12 @@ if [ -d "$parent_dir" ]; then
 	exit 1
 fi
 
-#Now, to create all the needed directories
-mkdir -p "$parent_dir"
-mkdir -p "$parent_dir/app"
-mkdir -p "$parent_dir/modules"
-mkdir -p "$parent_dir/assets"
-mkdir -p "$parent_dir/config"
+#Now, to create all the parent directory and its  sub-directories
+mkdir "$parent_dir"
+mkdir "$parent_dir/app"
+mkdir "$parent_dir/modules"
+mkdir "$parent_dir/assets"
+mkdir "$parent_dir/config"
 
 #creation of the files in the sub-directories and startup.sh
 touch $parent_dir/app/reminder.sh
@@ -92,7 +91,6 @@ Oluebubechi, Git, submitted
 EOF
 
 #writing to the config.env file
-#cat writes better than echo for text with "" that's why I used it.
 cat << 'EOF' > $parent_dir/config/config.env
 # This is the config file
 ASSIGNMENT="Shell Navigation"
@@ -117,4 +115,4 @@ printf "\nThe directory and its contents have been created.\n-------------------
 #Now, to make all these files executable
 find "$parent_dir" -type f -name "*.sh" -exec chmod +x {} \;
 
-printf "All is good for $yourName's environment!!! (^o^)/\n\nTo start the app, run:\n./$parent_dir/startup.sh\n----------------------------------------\n"
+printf "All is good for $yourName's environment!!! (^o^)/\n\nTo start the app, run:\n./$parent_dir/startup.sh\n"
