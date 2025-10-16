@@ -13,17 +13,13 @@ This script's purpose was to create a directory structure for whichever name was
 
 submission_reminder_$yourName/
 
--|-- app
-_|_____ reminder.sh
+-|-- app/reminder.sh
 
--|-- modules
-_|_____ functions.sh
+-|-- modules/functions.sh
 
--|-- assets
-_|_____ submissions.txt
+-|-- assets/submissions.txt
 
--|-- config
-_|_____ config.env
+-|-- config/config.env
 
 -|-- startup.sh
 
