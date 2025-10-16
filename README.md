@@ -13,19 +13,19 @@ This script's purpose was to create a directory structure for whichever name was
 
 submission_reminder_$yourName/
 
--|-- app/
+-|-- app
 _|_____ reminder.sh
 
--|-- modules/
+-|-- modules
 _|_____ functions.sh
 
--|-- assets/
+-|-- assets
 _|_____ submissions.txt
 
--|-- config/
+-|-- config
 _|_____ config.env
 
-_|-- startup.sh
+-|-- startup.sh
 
 The files' contents in each of the sub-directories were provided to us to copy in the create_environment.sh file. The file startup.sh was not provided though. It was supposed to contain the logic that makes the reminder.sh run.
 
