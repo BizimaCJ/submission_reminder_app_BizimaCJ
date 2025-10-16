@@ -4,10 +4,10 @@ Chiagoziem, Git, submitted
 Divine, Shell Navigation, not submitted
 Anissa, Shell Basics, submitted
 Bella, Shell Navigation, not submitted
-Carmel, Git, submitted
-Menankiti, Shell Basics, submitted
+Carmel, Git, not submitted
+Menankiti, Shell Basics, not submitted
 Honnette, Shell Navigation, not submitted
 Jessica, Shell Navigation, not submitted
 Rosette, Shell Basics, submitted
-Denise, Git, submitted
+Denise, Git, not submitted
 Oluebubechi, Git, submitted

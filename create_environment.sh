@@ -82,12 +82,12 @@ Chiagoziem, Git, submitted
 Divine, Shell Navigation, not submitted
 Anissa, Shell Basics, submitted
 Bella, Shell Navigation, not submitted
-Carmel, Git, submitted
-Menankiti, Shell Basics, submitted
+Carmel, Git, not submitted
+Menankiti, Shell Basics, not submitted
 Honnette, Shell Navigation, not submitted
 Jessica, Shell Navigation, not submitted
 Rosette, Shell Basics, submitted
-Denise, Git, submitted
+Denise, Git, not submitted
 Oluebubechi, Git, submitted
 EOF
 
@@ -112,9 +112,9 @@ cd "$(dirname "$0")" || { echo "Failed to change directory"; exit 1; }
 ./app/reminder.sh
 EOF
 
-printf "\nThe director and its contents have been created.\n----------------------------------------\n"
+printf "\nThe directory and its contents have been created.\n----------------------------------------\n"
 
 #Now, to make all these files executable
 find "$parent_dir" -type f -name "*.sh" -exec chmod +x {} \;
 
-printf "All is good for $yourName's environment!!! (^o^)/\n\nTo start the app, run:\ncd $parent_dir && ./startup.sh\n----------------------------------------\n"
+printf "All is good for $yourName's environment!!! (^o^)/\n\nTo start the app, run:\n./$parent_dir/startup.sh\n----------------------------------------\n"
