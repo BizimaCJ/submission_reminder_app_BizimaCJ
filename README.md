@@ -12,14 +12,23 @@ The setup script created was create_environment.sh
 This script's purpose was to create a directory structure for whichever name was entered as input. This is how the directory structure is supposed to look:
 
 submission_reminder_$yourName/
+
  |-- app/
+
       |__ reminder.sh
+
  |-- modules/
+
       |__ functions.sh
+
  |-- assets/
+
       |__ submissions.txt
+
  |-- config/
+
       |__ config.env
+
  |-- startup.sh
 
 The files' contents in each of the sub-directories were provided to us to copy in the create_environment.sh file. The file startup.sh was not provided though. It was supposed to contain the logic that makes the reminder.sh run.
